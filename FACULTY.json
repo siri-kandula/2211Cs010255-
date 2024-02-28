@@ -2,5 +2,30 @@
     { 
         "Name": "Dr. Meeravali Shaikh" , "Degree": "B. Tech (CSE), M. Tech (CSE), Ph. D (CSE)" , "Qualification":"HOD", "Experience" : "13 Years", "Image":"https://static.wixstatic.com/media/0c0246_2f12278506b84a73abff689c6598852c~mv2.jpg/v1/fill/w_160,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_%20Meeravali%20Shaikh.jpg"
     
-    }
+    },
+   
+    {
+       "Name": "Dr.Arun Singh Chouhan", "Degree": "B.E (CSE), M. Tech (CSE), Ph. D (CSE)" , "Qualification":"Associate Professor", "Experience" : "15 Years", "Image":"https://static.wixstatic.com/media/0c0246_354ee4952531440fb5f2d89dc37f7010~mv2.jpg/v1/fill/w_159,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_Arun%20Singh%20Chouhan.jpg"
+     },
+     
+     {
+       "Name": "Dr.M.Narayanan", "Degree": "B.E (CSE), M.E(CSE), Ph. D (CSE)" , "Qualification":"Professor", "Experience" : "17 Years", "Image":"https://static.wixstatic.com/media/0c0246_efc8ab272bd54140af8232e585fe2ba9~mv2.jpg/v1/fill/w_161,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_M_Narayanan.jpg" 
+     },
+     
+     {
+        "Name": "Dr.P.Rambabu", "Degree": "B.Tech(Civil), M. Tech(Remote Sensing),Ph. D(Remote Sensing)" , "Qualification":"Professor", "Experience" : "20 Years (Industry), 13 Years (Teaching)", "Image":"https://static.wixstatic.com/media/0c0246_539c4cc63af84b4c9cab67422c088b4d~mv2.jpg/v1/fill/w_161,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_P_Rambabu.jpg" 
+     }, 
+  
+     {
+       "Name": "Dr.M.Ravikanth", "Degree": "B. Tech (CSE), M. Tech (CSE), Ph. D (CSE)" , "Qualification":" Associate Professor", "Experience" : "17 Years", "Image":"https://static.wixstatic.com/media/0c0246_78dd7b225ffd4abe9cc4a3dae910731f~mv2.jpg/v1/fill/w_161,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_M_Ravikanth.jpg"
+     },
+    
+     {
+       "Name": "Dr.T. Phanindra", "Degree": "B. Tech (EEE), M. Tech (EEE), Ph. D (EEE)" , "Qualification":" Associate Professor", "Experience" : "12 Years", "Image":"https://static.wixstatic.com/media/0c0246_125d891d96af4792900745e517286c59~mv2.jpg/v1/fill/w_161,h_169,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Dr_%20T_%20Phanindra.jpg"
+      }
+
+      
+ 
+       
+
 ]
