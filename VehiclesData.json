@@ -1,0 +1,140 @@
+[
+  {
+    "VehicleName": "Tractor",
+    "Purpose": "Pulling Implements",
+    "Category": "Tractor",
+    "VideoURL": "https://youtu.be/GRpqf3VkVJc?si=nuyzR9OcNMO0hCS0",
+    "Price": "25,000 - 150,000",
+    "Uses": "Provides power for various agricultural implements used for tilling, planting, seeding, hauling trailers, and mowing. Available in different sizes and horsepower ranges to suit various farm sizes and needs."
+  },
+  {
+    "VehicleName": "Combine Harvester (Grain Harvester)",
+    "Purpose": "Harvesting Grain Crops",
+    "Category": "Harvester",
+    "VideoURL": "https://youtu.be/SNKWRB1-5pA?si=rmAEb_68HMyLVlHI",
+    "Price": "75,000 - 300,000",
+    "Uses": "Cuts mature grain crops, threshes the grain from the straw, and separates the clean grain for storage.  Combine harvesters can be self-propelled or towed by a tractor."
+  },
+  {
+    "VehicleName": "Seeding Machine (Planter)",
+    "Purpose": "Planting Seeds",
+    "Category": "Seeding Equipment",
+    "VideoURL": "https://youtu.be/LvQQ3WElejs?si=55JvXCE1uwFOt93G",
+    "Price": "5,000 - 30,000",
+    "Uses": "Precisely sows seeds at controlled depths and spacing to optimize germination and crop yield.  Available in various configurations for different seed sizes and planting methods."
+  },
+  {
+    "VehicleName": "Sprayer",
+    "Purpose": "Applying Pesticides & Fertilizers",
+    "Category": "Sprayer",
+    "VideoURL": "https://youtu.be/Dn7Q4oIrP3I?si=JnUcKeQPu8Z6gNTd",
+    "Price": "10,000 - 50,000",
+    "Uses": "Applies liquids like herbicides, insecticides, fungicides, and fertilizers to crops in a controlled manner to control weeds, pests, diseases, and provide essential nutrients for plant growth.  Sprayers come in various sizes and types (boom sprayers, mist blowers) for different applications."
+  },
+  {
+    "VehicleName": "Drone",
+    "Purpose": "Field Monitoring & Crop Scouting",
+    "Category": "Drone",
+    "VideoURL": "https://youtu.be/Dn7Q4oIrP3I?si=JnUcKeQPu8Z6gNTd",
+    "Price": "5,000 - 20,000",
+    "Uses": "Provides aerial imagery and data for monitoring crop health, identifying pests and diseases, optimizing irrigation management, and creating yield maps."
+  },
+  {
+    "VehicleName": "Automatic Milking System",
+    "Purpose": "Automated Milk Collection",
+    "Category": "Milking Equipment",
+    "VideoURL": "https://youtu.be/g-zYshsAg1E?si=1LXPCrX-CIPP5lCW",
+    "Price": "20,000 - 100,000",
+    "Uses": "Automates the milking process for dairy cows, improving milking efficiency, cow comfort, and milk quality.  Systems typically consist of milking units, automatic milk collection lines, and milk storage tanks."
+  },
+  {
+    "VehicleName": "Balers",
+    "Purpose": "Baling Hay & Straw",
+    "Category": "Balers",
+    "VideoURL": "https://youtu.be/aSst9E6EFDs?si=qVSuHpDkak50V0hY",
+    "Price": "10,000 - 40,000",
+    "Uses": "Collects and compresses cut hay or straw into bales for easy handling, storage, and transportation.  Bales can be round or square, and different sizes are available depending on the type of forage and handling equipment."
+  },
+  {
+    "VehicleName": "GPS Guidance System",
+    "Purpose": "Precise Vehicle Navigation",
+    "Category": "Guidance System",
+    "VideoURL": "https://youtu.be/FqJ3rG2kNl0?si=42HR6KVOGwJkwpXv",
+    "Price": "5,000 - 15,000",
+    "Uses": "Uses GPS technology to provide precise guidance for tractors, planters, and other equipment during field operations. This reduces overlaps and waste of seeds, fertilizers, and pesticides, leading to"
+},
+  {
+    "VehicleName": "Cultivator",
+    "Purpose": "Soil Preparation",
+    "Category": "Tillage Equipment",
+    "VideoURL": "https://youtu.be/OvVx-BP9LKo?si=zJDREQzrzz1bMvtG",
+    "Price": "5,000 - 20,000",
+    "Uses": "Used for preparing seedbeds by loosening soil, breaking up clods, and controlling weeds after plowing."
+  },
+  {
+    "VehicleName": "Plow",
+    "Purpose": "Soil Tillage",
+    "Category": "Tillage Equipment",
+    "VideoURL": "https://youtu.be/fQGlkKtKpe4?si=XyLEUoLWFCbBT2MJ",
+    "Price": "3,000 - 15,000",
+    "Uses": "Primary tillage tool for turning over soil, incorporating crop residue, and burying weeds."
+  },
+  {
+    "VehicleName": "Irrigation System",
+    "Category": "Irrigation Equipment",
+    "VideoURL": "https://youtu.be/Z9HAy9EYKKs?si=18x8vmfTw8veDj_e",
+    "Price": "Varies depending on system type and size",
+    "Uses": "Provides controlled application of water to crops to ensure optimal growth and yield.  Various irrigation systems exist, including center pivot, drip irrigation, and furrow irrigation."
+  },
+  {
+    "VehicleName": "Cotton Picker",
+    "Category": "Harvesting Equipment",
+    "VideoURL": "https://youtu.be/loBhGwXfK98?si=vsskC8-4d6GVqjOG",
+    "Price": "75,000 - 200,000",
+    "Uses": "Mechanically harvests mature cotton bolls from cotton plants."
+  },
+  {
+    "VehicleName": "Potato Harvester",
+    "Category": "Harvesting Equipment",
+    "VideoURL": "https://youtu.be/PMx-FSb4FJk?si=qgMGNvMpt8ngRWrz",
+    "Price": "40,000 - 100,000",
+    "Uses": "Mechanically digs and harvests potatoes from the ground."
+  },
+{
+  "VehicleName": "Disc Harrow",
+  "Purpose": "Soil Preparation & Weed Control",
+  "Category": "Tillage Equipment",
+  "VideoURL": "https://youtu.be/JA4wqTRxSwM?si=l4wbuwUFbJXXkeqM",
+  "Price": "7,000 - 30,000",
+  "Uses": "Rotates multiple sharp discs to break up soil, pulverize clods, and control weeds after plowing."
+},
+{
+  "VehicleName": "Fertilizer Spreader",
+  "Category": "Fertilizer Application",
+  "VideoURL": "https://youtu.be/-tNdK3u_7Cg?si=pZ5ztwMYmfNR-WXB",
+  "Price": "10,000 - 50,000",
+  "Uses": "Applies dry granular fertilizers to crops in a controlled manner to supplement soil nutrients and promote optimal plant growth."
+},
+{
+  "VehicleName": "Mower Conditioner",
+  "Category": "Haymaking Equipment",
+  "VideoURL": "https://youtu.be/_PzFdw6hByE?si=IEQgfJmnLgsNgySZ",
+  "Price": "20,000 - 75,000",
+  "Uses": "Cuts forage crops like hay and crushes stems to accelerate drying for proper haymaking."
+},
+{
+  "VehicleName": "Grain Cart",
+  "Category": "Harvesting Equipment",
+  "VideoURL": "https://youtu.be/mp8L7i4dINI?si=9_GGWFXIwCSM7epr",
+  "Price": "15,000 - 40,000",
+  "Uses": "Tow-behind trailer used to collect and transport harvested grain from the combine harvester to storage facilities."
+},
+{
+  "VehicleName": "Greenhouse Climate Control System",
+  "Category": "Greenhouse Equipment",
+  "VideoURL": "https://youtu.be/nlwdzf-bk90?si=qTuhQDN9vrvfze-S",
+  "Price": "Varies depending on size and complexity",
+  "Uses": "Automated system for managing temperature, humidity, ventilation, and other environmental factors within a greenhouse to optimize plant growth conditions."
+}
+
+]
