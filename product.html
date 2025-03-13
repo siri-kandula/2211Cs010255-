@@ -87,10 +87,10 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Cart</a>
-    <a href="#">Login</a>
+    <a href="#" onclick="showAlert('Home')">Home</a>
+    <a href="#" onclick="showAlert('Products')">Products</a>
+    <a href="#" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a>
+    <a href="#" onclick="showAlert('Login')">Login</a>
   </nav>
 
   <div class="product-container">
@@ -100,7 +100,7 @@
       <h3>Product 1</h3>
       <p>$19.99</p>
       <p>High-quality product description.</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
     </div>
 
     <!-- Product 2 -->
@@ -109,7 +109,7 @@
       <h3>Product 2</h3>
       <p>$29.99</p>
       <p>Another great product description.</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
     </div>
 
     <!-- Product 3 -->
@@ -118,12 +118,53 @@
       <h3>Product 3</h3>
       <p>$39.99</p>
       <p>Premium product description.</p>
-      <button>Add to Cart</button>
+      <button onclick="addToCart('Product 3', 39.99)">Add to Cart</button>
     </div>
   </div>
 
   <footer>
     <p>&copy; 2023 E-commerce Platform. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Cart data stored in localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Function to update the cart count in the navbar
+    function updateCartCount() {
+      const cartCount = document.getElementById('cart-count');
+      cartCount.textContent = cart.length;
+    }
+
+    // Function to add a product to the cart
+    function addToCart(name, price) {
+      const product = { name, price };
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(`${name} added to cart!`);
+    }
+
+    // Function to view the cart
+    function viewCart() {
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+      } else {
+        let cartItems = 'Your Cart:\n';
+        cart.forEach((item, index) => {
+          cartItems += `${index + 1}. ${item.name} - $${item.price}\n`;
+        });
+        alert(cartItems);
+      }
+    }
+
+    // Function to show alert for non-functional links
+    function showAlert(page) {
+      alert(`The ${page} page is under construction. Please check back later!`);
+    }
+
+    // Initialize cart count on page load
+    updateCartCount();
+  </script>
 </body>
 </html>
