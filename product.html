@@ -79,6 +79,34 @@
       bottom: 0;
       width: 100%;
     }
+    .form-container {
+      display: none;
+      margin: 20px auto;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #218838;
+    }
   </style>
 </head>
 <body>
@@ -90,11 +118,30 @@
     <a href="#" onclick="showAlert('Home')">Home</a>
     <a href="#" onclick="showAlert('Products')">Products</a>
     <a href="#" onclick="viewCart()">Cart (<span id="cart-count">0</span>)</a>
-    <a href="#" onclick="showAlert('Login')">Login</a>
+    <a href="#" onclick="toggleLoginForm()">Login</a>
   </nav>
 
+  <!-- Login Form -->
+  <div id="login-form" class="form-container">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="toggleRegisterForm()">Register</a></p>
+  </div>
+
+  <!-- Register Form -->
+  <div id="register-form" class="form-container">
+    <h2>Register</h2>
+    <input type="text" id="register-username" placeholder="Username">
+    <input type="email" id="register-email" placeholder="Email">
+    <input type="password" id="register-password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <p>Already have an account? <a href="#" onclick="toggleLoginForm()">Login</a></p>
+  </div>
+
+  <!-- Product Listing -->
   <div class="product-container">
-    <!-- Product 1 -->
     <div class="product-card">
       <img src="https://via.placeholder.com/150" alt="Product 1">
       <h3>Product 1</h3>
@@ -102,8 +149,6 @@
       <p>High-quality product description.</p>
       <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
     </div>
-
-    <!-- Product 2 -->
     <div class="product-card">
       <img src="https://via.placeholder.com/150" alt="Product 2">
       <h3>Product 2</h3>
@@ -111,8 +156,6 @@
       <p>Another great product description.</p>
       <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
     </div>
-
-    <!-- Product 3 -->
     <div class="product-card">
       <img src="https://via.placeholder.com/150" alt="Product 3">
       <h3>Product 3</h3>
@@ -122,24 +165,30 @@
     </div>
   </div>
 
+  <!-- Payment Section -->
+  <div id="payment-section" class="form-container">
+    <h2>Checkout</h2>
+    <p>Total: $<span id="total-amount">0</span></p>
+    <button onclick="processPayment()">Pay Now</button>
+  </div>
+
   <footer>
     <p>&copy; 2023 E-commerce Platform. All rights reserved.</p>
   </footer>
 
   <script>
-    // Cart data stored in localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let users = JSON.parse(localStorage.getItem('users')) || [];
+    let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
-    // Function to update the cart count in the navbar
+    // Function to update the cart count
     function updateCartCount() {
-      const cartCount = document.getElementById('cart-count');
-      cartCount.textContent = cart.length;
+      document.getElementById('cart-count').textContent = cart.length;
     }
 
     // Function to add a product to the cart
     function addToCart(name, price) {
-      const product = { name, price };
-      cart.push(product);
+      cart.push({ name, price });
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCount();
       alert(`${name} added to cart!`);
@@ -150,17 +199,67 @@
       if (cart.length === 0) {
         alert('Your cart is empty!');
       } else {
-        let cartItems = 'Your Cart:\n';
-        cart.forEach((item, index) => {
-          cartItems += `${index + 1}. ${item.name} - $${item.price}\n`;
-        });
-        alert(cartItems);
+        let total = cart.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById('total-amount').textContent = total.toFixed(2);
+        document.getElementById('payment-section').style.display = 'block';
       }
     }
 
-    // Function to show alert for non-functional links
-    function showAlert(page) {
-      alert(`The ${page} page is under construction. Please check back later!`);
+    // Function to process payment (simulated)
+    function processPayment() {
+      if (cart.length === 0) {
+        alert('Your cart is empty!');
+      } else if (!loggedInUser) {
+        alert('Please login to proceed with payment.');
+      } else {
+        alert('Payment successful! Thank you for your purchase.');
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        document.getElementById('payment-section').style.display = 'none';
+      }
+    }
+
+    // Function to toggle login form
+    function toggleLoginForm() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('register-form').style.display = 'none';
+    }
+
+    // Function to toggle register form
+    function toggleRegisterForm() {
+      document.getElementById('register-form').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none';
+    }
+
+    // Function to handle login (simulated)
+    function login() {
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      const user = users.find(u => u.email === email && u.password === password);
+      if (user) {
+        loggedInUser = user;
+        localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
+        alert('Login successful!');
+        toggleLoginForm();
+      } else {
+        alert('Invalid email or password.');
+      }
+    }
+
+    // Function to handle registration (simulated)
+    function register() {
+      const username = document.getElementById('register-username').value;
+      const email = document.getElementById('register-email').value;
+      const password = document.getElementById('register-password').value;
+      if (users.some(u => u.email === email)) {
+        alert('User already exists.');
+      } else {
+        users.push({ username, email, password });
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Registration successful! Please login.');
+        toggleLoginForm();
+      }
     }
 
     // Initialize cart count on page load
